@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="css/light.css" rel="stylesheet" id="theme">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+    <title>QRON</title>
+</head>
+<body>
+
+<div class="container">
+    <div class="header m2">
+
+    </div>
+
+    <div class="chrono">
+        <div class="time">
+            <span id="s_hours">00</span><span class="separator">:</span><span id="s_minutes">00</span><span class="separator">:</span><span id="s_seconds">00</span><span class="separator">,</span><span id="s_ms">000</span>
+        </div>
+        <div class="tips">
+            <p>hours</p>
+            <p>minutes</p>
+            <p>seconds</p>
+            <p>milliseconds</p>
+        </div>
+        <div class="controls m1">
+            <div class="controls-left">
+                <a href="#" title="Press C to change mode" class="mode mode-chrono"></a>
+            </div>
+            <div class="controls-center">
+                <button id="play" title="Hit Space to Start/Stop" class="button button-start m1"></button>
+                <button id="reset" title="Press Z to reset" class="button button-reset m1"></button>
+            </div>
+            <div class="controls-left"></div>
+        </div>
+    </div>
+
+    <div class="timer" hidden="true">
+        <div id="timer-input" class="time">
+            <input id="input-hours" class="input-timer" type="number"><span class="separator">:</span><input id="input-minutes" class="input-timer" type="number"><span class="separator">:</span><input id="input-seconds" class="input-timer" type="number">
+        </div>
+        <div class="tips">
+            <p>hours</p>
+            <p>minutes</p>
+            <p>seconds</p>
+        </div>
+        <div class="controls m1">
+            <div class="controls-left">
+                <a href="#" title="Press C to change mode" class="mode mode-timer"></a>
+            </div>
+            <div class="controls-center">
+                <button id="play-timer" title="Hit Space to Start/Stop" class="button button-start m1"></button>
+                <button id="reset-timer" title="Press Z to reset" class="button button-reset m1"></button>
+            </div>
+            <div class="controls-right">
+                <a href="#" id="sound-switcher" title="Press S to mute/unmute" class="sound sound-on"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img class="logo" src="images/logo.svg">
+
+        <a href="#" id="theme-toggle" title="Press X to change theme" class="theme mx2"> </a>
+    </div>
+
+</div>
+
+</body>
+</html>

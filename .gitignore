@@ -1,0 +1,11 @@
+# MacOS
+.DS_Store
+
+# WebStorm
+/.idea
+
+# Build
+export
+
+# Node
+node_modules
