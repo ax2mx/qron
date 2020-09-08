@@ -93,9 +93,6 @@ function formatTime(value, scale, modulo, padding) {
   return value.toString().padStart(padding, "0");
 }
 
-// TEST
-// switchMode();
-
 function soundHandler() {
   if (isSoundOn) {
     buttonSound.className = "sound sound-off";
