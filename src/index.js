@@ -26,6 +26,7 @@ let themeSwitcher = function() {
 
 
 // UI objects
+/* ------------------------------------------------------------------------- */
 
 const buttonPlay = document.querySelector("#play");
 const buttonReset = document.querySelector("#reset");
@@ -56,7 +57,7 @@ const inputTimer = document.querySelector("#timer-input");
 
 
 // Event listeners
-
+/* ------------------------------------------------------------------------- */
 inputTimer.addEventListener("change", inputHandler);
 
 document.addEventListener("keydown", keyboardHandler);
@@ -75,17 +76,14 @@ buttonTheme.addEventListener("click", themeSwitcher);
 
 buttonSound.addEventListener("click", soundHandler);
 
+
 // Generic UI
+/* ------------------------------------------------------------------------- */
 
 function switchMode() {
   chronoUI.hidden = !chronoUI.hidden;
   timerUI.hidden = !timerUI.hidden;
   localStorage.setItem("ui", chronoUI.hidden);
-  // if (timerUI.hidden) {
-  //   buttonSwitch.className = "button button-chrono mx2";
-  // } else {
-  //   buttonSwitch.className = "button button-timer mx2";
-  // }
 }
 
 function formatTime(value, scale, modulo, padding) {
@@ -104,9 +102,6 @@ function soundHandler() {
 }
 
 function onloadHandler() {
-  console.log("Page reloaded");
-  // isLight = localStorage.getItem("theme");
-  // if (isLight === "true") themeSwitcher();
   if (localStorage.getItem("theme") === "true") themeSwitcher();
   if (localStorage.getItem("ui") === "true") switchMode();
   if (localStorage.getItem("sound") === "true") soundHandler();
@@ -127,18 +122,13 @@ function keyboardHandler(e) {
 }
 
 // Timer functions
-
+/* ------------------------------------------------------------------------- */
 function inputHandler(e) {
   if (e.target.id === "input-hours") {
     e.target.value %= 24;
   } else {
     e.target.value %= 60;
   }
-
-  console.log(`${e.target.id} changed`, e.target.value);
-
-  // e.target.value %= (e.target.id === "input-hours") ? 24 : 60;
-  // console.log(`${e.target.id} changed`, e.target.value);
 
   setTimer();
   displayTimer();
@@ -167,11 +157,9 @@ function restoreTimer() {
 
 function storeChrono(value) {
   localStorage.setItem("chrono", value);
-  console.log("Time saved!");
 }
 
 function restoreChrono() {
-  console.log("Restored time:", localStorage.getItem("chrono"));
   return localStorage.getItem("chrono");
 }
 
@@ -197,12 +185,11 @@ function coreTimer() {
 
 function playTimer() {
   if (!+setTimer(inputHours.value, inputMinutes.value, inputSeconds.value)) {
-    console.log("Error: Time is not set. Please enter non-zero time");
+    inputMinutes.value = 30;
     return;
   }
 
   if (isTimerPaused) {
-    // console.log("Timer started");
     isTimerPaused = false;
 
     inputSeconds.setAttribute("readonly", true);
@@ -212,7 +199,6 @@ function playTimer() {
     buttonPlayTimer.className = "button button-stop m1";
     coreTimer();
   } else {
-    // console.log("Timer paused");
     isTimerPaused = true;
     buttonPlayTimer.className = "button button-start m1";
     clearTimeout(timerId);
@@ -239,10 +225,6 @@ function resetTimer() {
 function visualSignal() {
   const blinkId = setInterval(() => {
     themeSwitcher();
-
-    // setTimeout(() => {
-    //   // document.body.style.background = color;
-    // }, 300);
   }, 300);
 
   setTimeout(() => {
@@ -266,7 +248,7 @@ function playNote(frequency, duration) {
 }
 
 function playSignal() {
-  // Here come a simple tune
+  // Here comes a simple tune
   const sineId = setInterval(() => {
     playNote(440, 0.15);
 
@@ -280,8 +262,9 @@ function playSignal() {
   }, 2400);
 }
 
-// Stopwatch Logic
 
+// Stopwatch Logic
+/* ------------------------------------------------------------------------- */
 // Play button handler
 function playWatch() {
   if (isPaused) {
@@ -291,7 +274,6 @@ function playWatch() {
   } else {
     isPaused = true;
     offset += Date.now();
-    console.log("Time stopped", offset);
     storeChrono(offset);
     buttonPlay.className = "button button-start m1"; // Hardcode :-(
   }
