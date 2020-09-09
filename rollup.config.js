@@ -2,7 +2,6 @@ import livereload from 'rollup-plugin-livereload';
 import htmlTemplate from 'rollup-plugin-generate-html-template';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
-import css from 'rollup-plugin-css-porter';
 import { terser } from "rollup-plugin-terser";
 import analyze from 'rollup-plugin-analyzer';
 import copy from "rollup-plugin-copy-assets";
