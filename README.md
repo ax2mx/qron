@@ -16,4 +16,4 @@ Meet QRON — a handy tool that may help you to appreciate your time and bring m
 - **Scientific experiments**. Reaction time, probability test, time series, etc.
 - **Cooking**. Cook a hard or soft boiled eggs, medium or well-done steaks
 
-Time is priceless, so feel free to start using QRON right now!
+Time is priceless, so feel free to start using QRON right now!
