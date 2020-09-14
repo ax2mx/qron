@@ -1,6 +1,6 @@
 {
   "name": "qron",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Simple stopwatch and timer application",
   "main": "src/index.js",
   "scripts": {
