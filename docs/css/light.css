@@ -1,0 +1,266 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #f8f9fa;
+  color: #212529;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.time,
+.input-timer {
+  font-family: "Roboto Mono", "Source Code Pro", "PT Mono", monospace;
+  font-size: 7rem;
+  text-align: center;
+}
+
+.tips {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  color: #adb5bd;
+  font-size: 1.25rem;
+}
+
+.tips > p {
+  flex-grow: 1;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.separator {
+  color: #ced4da;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls-center {
+  text-align: center;
+}
+
+.controls-left,
+.controls-right {
+  width: 5rem;
+}
+
+.controls-right {
+  text-align: left;
+}
+
+.controls-left {
+  text-align: right;
+}
+
+/* Margin helpers */
+
+.m1 {
+  margin: 1rem;
+}
+
+.m2 {
+  margin: 2rem;
+}
+
+.m3 {
+  margin: 3rem;
+}
+
+.mx2 {
+  margin: 0 1rem;
+}
+
+.mx4 {
+  margin: 0 4rem;
+}
+
+.my2 {
+  margin: 2rem 0;
+}
+
+.button {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 100%;
+  border: none;
+  cursor: pointer;
+  background: #e9ecef;
+}
+
+/*.button:hover {*/
+/*    background: #CED4DA;*/
+/*}*/
+
+.button-start {
+  background: url("../images/play.svg") no-repeat 60% 50% #38d9a9;
+  background-size: 50%;
+}
+
+.button-start:hover {
+  background: url("../images/play.svg") no-repeat 60% 50% #12b886;
+  background-size: 50%;
+}
+
+.button-stop {
+  background: url("../images/stop.svg") no-repeat center #ff8787;
+  background-size: 50%;
+}
+
+.button-stop:hover {
+  background: url("../images/stop.svg") no-repeat center #fa5252;
+  background-size: 50%;
+}
+
+.button-disabled {
+  background: #ccc;
+}
+
+.button-disabled:hover {
+  background: #999;
+}
+
+.button-reset {
+  background: url("../images/reset.svg") no-repeat center #e9ecef;
+}
+
+.button-reset:hover {
+  background: url("../images/reset.svg") no-repeat center #ced4da;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.logo {
+  height: 2.5rem;
+}
+
+.about {
+  font-size: 1.25rem;
+  color: #adb5bd;
+  display: block;
+  text-decoration: none;
+}
+
+.theme {
+  display: block;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: url("../images/theme.svg") no-repeat center;
+  background-size: contain;
+}
+
+.sound,
+.mode {
+  display: block;
+  height: 2.25rem;
+}
+
+.sound-on {
+  background: url("../images/sound-on.svg") no-repeat center transparent;
+  background-size: contain;
+}
+
+.sound-off {
+  background: url("../images/sound-off.svg") no-repeat center transparent;
+  background-size: contain;
+}
+
+.mode-chrono {
+  background: url("../images/chrono.svg") no-repeat center transparent;
+  background-size: contain;
+}
+
+.mode-timer {
+  background: url("../images/timer.svg") no-repeat center transparent;
+  background-size: contain;
+}
+
+.misc {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  background: transparent;
+  color: #212529;
+  border: 0;
+  padding: 0;
+  width: 10rem;
+  font-family: "Roboto Mono", "Source Code Pro", "PT Mono", monospace;
+  font-size: 7rem;
+  text-align: CENTER;
+}
+
+input[readonly="true"] {
+  color: #495057;
+}
+
+@media all and (max-width: 800px) {
+  .time {
+    font-size: 5rem;
+    text-align: center;
+  }
+  .button {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+  }
+
+  input[type="number"] {
+    font-size: 5rem;
+    text-align: center;
+    width: 8rem;
+  }
+}
+
+@media all and (max-width: 560px) {
+  .time {
+    font-size: 3.75rem;
+    text-align: center;
+  }
+
+  .tips {
+    font-size: 1rem;
+  }
+
+  .controls-left,
+  .controls-right {
+    width: 3rem;
+  }
+
+  input[type="number"] {
+    font-size: 3.75rem;
+    text-align: center;
+    width: 5rem;
+  }
+}
