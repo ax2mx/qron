@@ -5,7 +5,7 @@
 /.idea
 
 # Build
-export
+docs
 
 # Node
 node_modules

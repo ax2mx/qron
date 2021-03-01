@@ -4,11 +4,11 @@
   "description": "Simple stopwatch and timer application",
   "main": "src/index.js",
   "scripts": {
-    "clean": "rimraf export",
+    "clean": "rimraf docs",
     "build": "rollup -c",
     "watch": "rollup -c -w",
-    "mincss": "foreach -g \"export/css/**/*.css\" -x \"cleancss --level 1 #{path} -o #{path}\" min --no-c",
-    "zip": "zip -r export/bundle.zip export/**",
+    "mincss": "foreach -g \"docs/css/**/*.css\" -x \"cleancss --level 1 #{path} -o #{path}\" min --no-c",
+    "zip": "zip -r docs/bundle.zip export/**",
     "prod": "npm-run-all --serial clean build mincss zip ",
     "dev": "npm-run-all --parallel start watch",
     "start": "serve src"

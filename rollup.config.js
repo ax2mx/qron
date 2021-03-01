@@ -13,7 +13,7 @@ const production = !process.env.ROLLUP_WATCH;
 module.exports = {
   input: 'src/index.js',
   output: {
-    file: 'export/bundle.js',
+    file: 'docs/bundle.js',
     format: 'iife'
   },
   plugins: [
